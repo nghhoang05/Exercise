@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ex 48 - Nguyễn Huy Hoàng</title>
+        <script>
+            function register()
+            {
+                const firstName = document.getElementById("first_name").value;
+                const lastName = document.getElementById("last_name").value;
+                const product = document.getElementById("product").value;
+                let message = "Đăng ký thành công!\n";
+                message += "Họ tên: " + firstName + " " + lastName + "\n";
+                message += "Sản phẩm: " + product + "\n";
+                alert(message)
+            }
+        </script>
+    </head>
+    <body>
+        <p align="center">
+            <img src="images/Jackson.gif">
+        </p>
+        <h2 align="center">Registration Form</h2>
+        <p align="center">
+            Register your Jackson Electronics product here
+        </p>
+        <form name="registration">
+            <table>
+                <tr>
+                    <td>First name:</td>
+                    <td>
+                        <input type="text" name="first_name" id="first_name"/>
+                    </td>
+                    <td>Last Name:</td>
+                    <td colspan="3">
+                        <input type="text" name="last_name" id="last_name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address #1:</td>
+                    <td colspan="4">
+                        <input type="text" name="address1" id="address1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Address #2:</td>
+                    <td colspan="4">
+                        <input type="text" name="address2" id="address2"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>
+                        <input type="text" name="city" id="city"/>
+                    </td>
+                    <td>State:</td>
+                    <td>
+                        <input type="text" name="state" id="state"/>
+                    </td>
+                    <td>Zip:</td>
+                    <td>
+                        <input type="text" name="zip" id="zip"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td>
+                        <input type="text" name="country" id="country">
+                    </td>
+                </tr>
+                <hr/>
+                <tr>
+                    <td>Product:</td>
+                    <td>
+                        <select name="product" id="product">
+                            <option>ScanMaster</option>
+                            <option>Master</option>
+                            <option>Tea</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Data Purchased:</td>
+                    <td>
+                       <input type="text" name="data_purchased" id="data_purchased"/> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>Serial#:</td>
+                    <td>
+                        <input type="text" name="serial" id="serial"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Used for:</td>
+                    <td colspan="5">
+                        <input type="radio" name="used_for" id="used_for1"/>
+                        <label for="used_for1">Home</label> 
+                        <input type="radio" name="used_for" id="used_for2"/>
+                        <label for="used_for2">Educational Insitution</label> 
+                        <br/>
+                        <input type="radio" name="used_for" id="used_for3"/>
+                        <label for="used_for3">Business</label> 
+                        <input type="radio" name="used_for" id="used_for4"/>
+                        <label for="used_for4">Other</label> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>System (check all that apply):</td>
+                    <td colspan="5">
+                        <input type="checkbox" name="system" id="system1"/>
+                        <label for="system1">Windows</label>
+                        <input type="checkbox" name="system" id="system2"/>
+                        <label for="system2">UNIX</label>
+                        <br/>
+                        <input type="checkbox" name="system" id="system3"/>
+                        <label for="system3">Macintosh</label>
+                        <input type="checkbox" name="system" id="system4"/>
+                        <label for="system4">Other</label>
+                    </td>
+                </tr>
+                <hr/>
+                <tr>
+                    <td>Comments?:</td>
+                    <td colspan="5">
+                        <input type="text" name="comments" id="comments"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td colspan="5">
+                        <button type="button" onclick="register()">
+                            Click to register
+                        </button>
+                        <button type="reset">
+                            Click to cancel
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
