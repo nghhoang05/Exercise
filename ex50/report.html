@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ex 50 - Nguyễn Huy Hoàng</title>
+        <script>
+            function submitReport()
+            {
+                const firstName = document.getElementById("first_name").value;
+                const lastName = document.getElementById("last_name").value;
+                let message = "Nộp bài thành công!\n";
+                message += "Họ tên: " + firstName + " " + lastName + "\n";
+                alert(message)
+            }
+        </script>
+    </head>
+    <body>
+        <p align="center">
+            <img src="images/DeLong.jpg"/>
+        </p>
+        <h2>Travel Expense Report</h2>
+        <hr/>
+        <form name="report">
+            <p>
+                1&rpar; First Name:
+                <input type="text" name="first_name" id="first_name"/>
+                Last Name:
+                <input type="text" name="last_name" id="last_name"/>
+            </p>
+            <p>
+                2&rpar; Social Security Number:
+                <input type="text" name="number" id="number"/>
+            </p>
+            <p>
+                3&rpar; Department:
+                <select name="department">
+                    <option>Accounting</option>
+                    <option>Sales</option>
+                    <option>Marketing</option>
+                    <option>Legal</option>
+                    <option>HR</option>
+                    <option>Logistics</option>
+                </select>
+            </p>
+            <p>
+                4&rpar; Describe the purpose of your trip
+            </p>
+            <input type="text" name="purpose" id="purpose" style="width: 100%; height: 100px;"/>
+            <p>
+                5&rpar; Itemize your travel expenses
+            </p>
+            <table border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="date1"/>
+                    </td>
+                    <td>
+                        <input type="text" name="description" id="description1"/>
+                    </td>
+                    <td>
+                        <select name="category" id="category1">
+                            <option>Meal</option>
+                            <option>Drink</option>
+                            <option>Food</option>
+                            <option>Thing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" id="amount1"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="date2"/>
+                    </td>
+                    <td>
+                        <input type="text" name="description" id="description2"/>
+                    </td>
+                    <td>
+                        <select name="category" id="category2">
+                            <option>Meal</option>
+                            <option>Drink</option>
+                            <option>Food</option>
+                            <option>Thing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" id="amount2"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="date3"/>
+                    </td>
+                    <td>
+                        <input type="text" name="description" id="description3"/>
+                    </td>
+                    <td>
+                        <select name="category" id="category3">
+                            <option>Meal</option>
+                            <option>Drink</option>
+                            <option>Food</option>
+                            <option>Thing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" id="amount3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="date" name="date" id="date4"/>
+                    </td>
+                    <td>
+                        <input type="text" name="description" id="description4"/>
+                    </td>
+                    <td>
+                        <select name="category" id="category4">
+                            <option>Meal</option>
+                            <option>Drink</option>
+                            <option>Food</option>
+                            <option>Thing</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" name="amount" id="amount4"/>
+                    </td>
+                </tr>
+            </table>
+            <p>
+                6&rpar; Have you submitted your receipts?
+                <input type="radio" name="submit" id="submit1"/>
+                <label for="submit1">Yes</label>
+                <input type="radio" name="submit" id="submit2"/>
+                <label for="submit2">No</label>
+            </p>
+            <button type="button" onclick="submitReport()">
+                Submit travel expenses
+            </button>
+            <button type="reset">
+                Reset
+            </button>
+            <br/>
+            <p>
+                Questions? Contact Debbie Larson in Accounting (ext. 2150)
+            </p>
+        </form>
+    </body>
+</html>
