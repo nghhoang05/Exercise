@@ -2,14 +2,27 @@
     <head>
         <meta charset="utf-8">
         <title>Login - Nguyễn Huy Hoàng</title>
+        <script>
+            function open_itbclub()
+            {
+                //alert("Bạn muốn mở website CLB ITB hả?")
+                window.open("https://itbclub.uel.edu.vn","_blank")
+            }
+        </script>
     </head>
     <body>
         <form name="frm_login"
             action="processlogin.html"
             method="get">
+        <fieldset>
+            <legend>Login HR system</legend>
             <table>
                 <tr>
-                    <td>User Name</td>
+                    <td>
+                        <label for="username">
+                            User Name
+                        </label>
+                    </td>
                     <td>
                         <input type="text" name="username" id="username"/>
                     </td>
@@ -24,6 +37,9 @@
                     <td>&nbsp;</td>
                     <td>
                         <input type="checkbox" name="save" id="save"/>
+                        <label for="save">
+                            Save login Infor
+                        </label>
                     </td>
                 </tr>
                 <tr>
@@ -31,9 +47,11 @@
                     <td>
                         <button type="submit" >Login</button>
                         <button type="reset" >Reset</button>
+                        <button type="button" onclick="open_itbclub()">Open ItbClub</button>
                     </td>
                 </tr>
             </table>
+        </fieldset>
         </form>
     </body>
 </html>
