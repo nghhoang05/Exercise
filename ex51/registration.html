@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ex 51 - Nguyễn Huy Hoàng</title>
+    </head>
+    <body style="background-color: seagreen; color: white;">
+        <p align="center">
+            <img src="images/Logo.gif"/>
+        </p>
+        <h1 align="center">
+            Newborn Registration
+        </h1>
+        <form name="registration" id="registration">
+            <p>
+                Date:
+                <input type="date" name="date" id="date"/>
+            </p>
+            <p>
+                1&rpar; Infant's first name:
+                <input type="text" name="first_name" id="first_name"/>
+                Last:
+                <input type="text" name="last_name" id="last_name"/>
+            </p>
+            <p>
+                2&rpar; Medical Record #:
+                <input type="text" name="record" id="record"/>
+            </p>
+            <p>
+                3&rpar; Date of birth:
+                <input type="date" name="birth" id="birth"/>
+            </p>
+            <p>
+                4&rpar; Birth weight:
+                <input type="text" name="weight" id="weight"/>
+            </p>
+            <p>
+                5&rpar; APGAR score
+                <input type="text" name="score" id="score"/>
+            </p>
+            <p>
+                6&rpar; Mother's first name: 
+                <input type="text" name="mother_first" id="mother_first"/>
+                Last:
+                <input type="text" name="mother_last" id="mother_last"/>
+            </p>
+            <p>
+                7&rpar; Father's first name: 
+                <input type="text" name="father_first" id="father_first"/>
+                Last:
+                <input type="text" name="father_last" id="father_last"/>
+            </p>
+            <p>
+                8&rpar; Physician (check all that apply)
+                <select name="Physician" id="Physician" multiple="4">
+                    <option>Dr.Warren Albert</option>
+                    <option>Dr.Maria Alvarez</option>
+                    <option>Dr. Karen Brinkman</option>
+                    <option>Dr.Micheal Kerry</option>
+                    <option>Dr.Dianel</option>
+                </select>
+            </p>
+            <p align="center">
+                <button type="button" onclick="register()">
+                    Register
+                </button>
+                <button type="reset">
+                    Register
+                </button>
+            </p>
+        </form>
+    </body>
+</html>
