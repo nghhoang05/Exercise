@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Switch - nguyễn Huy Hoàng</title>
+        <script type="text/javascript">
+            function change_background()
+            {
+                v=Math.floor(Math.random()*6)
+                mydiv=document.getElementById("mydiv")
+                switch(v)
+                {
+                    case 0:
+                        mydiv.style="width:100%; height:100px;background-color: cyan;"
+                        break
+                    case 1:
+                        mydiv.style="width:100%; height:100px;background-color: pink;"
+                        break
+                    case 2:
+                        mydiv.style="width:100%; height:100px;background-color: purple;"
+                        break
+                    case 3:
+                        mydiv.style="width:100%; height:100px;background-color: green;"
+                        break
+                    case 4:
+                        mydiv.style="width:100%; height:100px;background-color: red;"
+                        break
+                    default:
+                        mydiv.style="width:100%; height:100px;background-color: black;"
+                        break
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="mydiv" style="width: 100%; height: 100px;background-color: yellow" onclick="change_background()">
+
+        </div>
+    </body>
+</html>
