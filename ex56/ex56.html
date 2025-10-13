@@ -1,0 +1,140 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ex 56 - Nguyễn Huy Hoàng</title>
+    <style>
+        /* CSS để tạo giao diện giống trong bài tập */
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f0f0; }
+        .container { border: 1px solid #999; padding: 20px; background-color: #fff; width: 800px; }
+        h2 { text-align: center; margin-top: 0; }
+        .main-table, .button-table { width: 100%; border-collapse: collapse; }
+        .main-table th { text-align: left; font-size: 1.2em; padding-bottom: 5px; }
+        textarea { width: 98%; height: 150px; font-size: 1em; padding: 5px; resize: vertical; }
+        .button-table button, .button-table a { width: 100%; padding: 10px; margin-bottom: 5px; font-size: 0.9em; cursor: pointer; box-sizing: border-box; }
+        .button-table a { display: block; text-align: center; background-color: #f0f0f0; color: black; text-decoration: none; border: 1px solid #ccc; border-radius: 2px;}
+        .button-table a:hover { background-color: #ddd; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Using String Processing functions</h2>
+        <form name="myform">
+            <table class="main-table">
+                <tr>
+                    <th>Input Data:</th>
+                    <th>Result:</th>
+                </tr>
+                <tr>
+                    <td><textarea id="input_data" name="input_data"></textarea></td>
+                    <td><textarea id="output_data" name="output_data" readonly></textarea></td>
+                </tr>
+            </table>
+            <table class="button-table">
+                <tr>
+                    <td><button type="button" onclick="enterData()">Enter Data</button></td>
+                    <td><button type="button" onclick="countUppercase()">Count the number of uppercase characters</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="displayUppercase()">Uppercase display</button></td>
+                    <td><button type="button" onclick="outputWordsPerLine()">Output one word per line</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="displayLowercase()">lowercase display</button></td>
+                    <td><button type="button" onclick="countWords()">Word count</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="countLowercase()">Count the number of lowercase characters</button></td>
+                    <td><button type="button" onclick="printVowelsConsonants()">print vowels, consonants</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="https://www.w3schools.com/js/js_string_methods.asp" target="_blank">
+                            W3C's String Processing Website
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        // Lấy tham chiếu đến các phần tử sau khi chúng đã được tạo
+        const input = document.getElementById('input_data');
+        const output = document.getElementById('output_data');
+        
+        function enterData() {
+            input.value = '';
+            output.value = '';
+            input.focus();
+        }
+
+        function countUppercase() {
+            const text = input.value;
+            let count = 0;
+            for (const char of text) {
+                if (char >= 'A' && char <= 'Z') {
+                    count++;
+                }
+            }
+            output.value = 'Number of uppercase characters: ' + count;
+        }
+
+        function displayUppercase() {
+            output.value = input.value.toUpperCase();
+        }
+
+        function outputWordsPerLine() {
+            const text = input.value.trim();
+            if (text === '') {
+                output.value = '';
+                return;
+            }
+            const words = text.split(/\s+/);
+            output.value = words.join('\n');
+        }
+
+        function displayLowercase() {
+            output.value = input.value.toLowerCase();
+        }
+
+        function countWords() {
+            const text = input.value.trim();
+            if (text === '') {
+                output.value = 'Word count: 0';
+                return;
+            }
+            const words = text.split(/\s+/);
+            // 3. Sửa lại cú pháp chuỗi cho đúng
+            output.value = `Word count: ${words.length}`;
+        }
+
+        function countLowercase() {
+            const text = input.value;
+            let count = 0;
+            for (const char of text) {
+                if (char >= 'a' && char <= 'z') {
+                    count++;
+                }
+            }
+            output.value = 'Number of lowercase characters: ' + count;
+        }
+
+        function printVowelsConsonants() {
+            const text = input.value.toLowerCase();
+            const vowels = "aeiouy";
+            let vowelStr = "";
+            let consonantStr = "";
+            for (const char of text) {
+                if (char >= 'a' && char <= "z") {
+                    if (vowels.includes(char)) {
+                        vowelStr += char + " ";
+                    } else {
+                        consonantStr += char + " ";
+                    }
+                }
+            }
+            output.value = 'Vowels: ' + vowelStr + '\n\nConsonants: ' + consonantStr;
+        }
+    </script>
+</body>
+</html>
